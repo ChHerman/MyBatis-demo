@@ -14,22 +14,22 @@ public class UserDaoImpl implements UserDao {
     }
 
     public User queryUserById(Integer id) {
-        return this.sqlSession.selectOne("UserDaoMapper.queryUserById");
+        return this.sqlSession.selectOne("UserDao.queryUserById", id);
     }
 
     public List<User> queryUserAll() {
-        return this.sqlSession.selectList("UserDaoMapper.queryUserAll");
+        return this.sqlSession.selectList("UserDao.queryUserAll");
     }
 
     public void insertUser(User user) {
-        this.sqlSession.insert("UserDaoMapper.insertUser");
+        this.sqlSession.insert("UserDao.insertUser", user);
     }
 
     public void updateUser(User user) {
-        this.sqlSession.update("UserDaoMapper.updateUser");
+        this.sqlSession.update("UserDao.updateUser", user);
     }
 
     public void deleteUser(Integer id) {
-        this.sqlSession.delete("UserDaoMapper.deleteUser");
+        this.sqlSession.delete("UserDao.deleteUser", id);
     }
 }

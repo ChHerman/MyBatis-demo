@@ -18,3 +18,12 @@ PRIMARY KEY (id)
 
 INSERT INTO tb_user ( user_name, password, name, age, sex, birthday, created, updated) VALUES ( "zpc", "123456", "鹏程", "22", "1", "1990-09-02", sysdate(), sysdate());
 INSERT INTO tb_user ( user_name, password, name, age, sex, birthday, created, updated) VALUES ( "hj", "123456", "静静", "22", "1", "1993-09-05", sysdate(), sysdate());
+
+CREATE TABLE tb_order (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  user_id INT(11) DEFAULT NULL,
+  order_number VARCHAR(255) DEFAULT NULL,
+  created DATETIME DEFAULT NULL,
+  updated DATETIME DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;

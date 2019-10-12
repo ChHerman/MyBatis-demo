@@ -31,12 +31,15 @@ public class UserDaoTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         // 获取sqlSession
         this.sqlSession = sqlSessionFactory.openSession();
+/*
         this.userDao = new UserDaoImpl(this.sqlSession);
+*/
+        this.userDao = sqlSession.getMapper(UserDao.class);
     }
 
     @Test
     public void queryUserById() throws Exception{
-        System.out.println(this.userDao.queryUserById(1));
+        System.out.println(this.userDao.queryUserById(2));
     }
 
     @Test
