@@ -1,7 +1,8 @@
 package com.hc.mybatis.dao.impl;
 
-import com.hc.mybatis.pojo.User;
+import com.hc.mybatis.MybatisTest;
 import com.hc.mybatis.dao.UserDao;
+import com.hc.mybatis.pojo.User;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;

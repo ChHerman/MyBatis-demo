@@ -52,5 +52,6 @@
         <mapper resource="mapper/MyMapper.xml"/>
         <mapper resource="mapper/UserDaoMapper.xml"/>
         <mapper resource="mapper/UserMapper.xml" />
+        <mapper resource="mapper/OrderMapper.xml" />
     </mappers>
 </configuration>
