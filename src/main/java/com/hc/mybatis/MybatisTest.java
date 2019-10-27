@@ -1,10 +1,13 @@
-import com.hc.mybatis.User;
+package com.hc.mybatis;
+
+import com.hc.mybatis.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
+import java.util.List;
 
 public class MybatisTest {
     public static void main(String[] args) throws Exception {
@@ -20,4 +23,5 @@ public class MybatisTest {
             sqlSession.close();
         }
     }
+
 }

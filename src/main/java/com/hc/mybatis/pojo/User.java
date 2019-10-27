@@ -1,4 +1,4 @@
-package com.hc.mybatis;
+package com.hc.mybatis.pojo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

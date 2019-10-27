@@ -9,6 +9,20 @@
         <property name="username" value="root"/>
         <property name="password" value="root"/>
     </properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <!--type:实体类的全路径。alias:别名，通常首字母大写-->
+        <!--<typeAlias type="com.hc.mybatis.pojo.User" alias="User"/>-->
+        <package name="com.hc.mybatis.pojo"/>
+    </typeAliases>
+    <!-- mybatis-config.xml -->
+    <plugins>
+        <plugin interceptor="com.hc.mybatis.ExamplePlugin">
+            <property name="someProperty" value="100"/>
+        </plugin>
+    </plugins>
     <environments default="test">
         <!-- id：唯一标识 -->
         <environment id="test">
@@ -36,5 +50,8 @@
     </environments>
     <mappers>
         <mapper resource="mapper/MyMapper.xml"/>
+        <mapper resource="mapper/UserDaoMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml" />
+        <mapper resource="mapper/OrderMapper.xml" />
     </mappers>
 </configuration>
